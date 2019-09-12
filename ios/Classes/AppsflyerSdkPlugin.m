@@ -269,7 +269,7 @@
                                                            options:NSJSONWritingPrettyPrinted
                                                              error:&error];
     if(!error){
-        [flutterViewController sendOnChannel:channel message:dataFromDict binaryReply:^(NSData * _Nullable reply) {
+        [flutterViewController.binaryMessenger sendOnChannel:channel message:dataFromDict binaryReply:^(NSData * _Nullable reply) {
             //
         }];
     }
